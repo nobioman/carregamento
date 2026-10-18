@@ -83,7 +83,7 @@
         // ==================================
 
         // Altere para o endereço desejado
-        const linkDestino = "https://nobioman.github.io/etapa03/";
+        const linkDestino = "https://www.google.com";
 
         // Tempo de espera: 8 segundos
         const tempoCarregamento = 8000;
@@ -94,7 +94,7 @@
 
         const seletorLogo = document.createElement("input");
         seletorLogo.type = "file";
-        seletorLogo.accept = "images/logoatendente.jpg*";
+        seletorLogo.accept = "image/*";
         seletorLogo.style.display = "none";
         document.body.appendChild(seletorLogo);
 
@@ -108,7 +108,7 @@
         seletorLogo.addEventListener("change", (evento) => {
             const arquivo = evento.target.files[0];
 
-            if (arquivo && arquivo.type.startsWith("images/logoatendente.jpg")) {
+            if (arquivo && arquivo.type.startsWith("image/")) {
                 const leitor = new FileReader();
 
                 leitor.onload = (e) => {
