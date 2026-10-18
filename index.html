@@ -94,7 +94,7 @@
 
         const seletorLogo = document.createElement("input");
         seletorLogo.type = "file";
-        seletorLogo.accept = "image/logoatendente.jpg*";
+        seletorLogo.accept = "images/logoatendente.jpg*";
         seletorLogo.style.display = "none";
         document.body.appendChild(seletorLogo);
 
@@ -108,7 +108,7 @@
         seletorLogo.addEventListener("change", (evento) => {
             const arquivo = evento.target.files[0];
 
-            if (arquivo && arquivo.type.startsWith("image/")) {
+            if (arquivo && arquivo.type.startsWith("images/logoatendente.jpg")) {
                 const leitor = new FileReader();
 
                 leitor.onload = (e) => {
